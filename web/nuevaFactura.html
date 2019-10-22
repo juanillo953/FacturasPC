@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("./fondo3.jpg");
+        }
+        label{
+            width:100%;
+            display: inline-flex;
+            margin:1%;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            margin-top:10vh;
+            background-color: rgb(41, 155, 194);
+            border: 1px solid rgb(41, 41, 204);
+            
+        }
+        input{
+            border:1px solid white;
+            margin: 1%;
+            width: 100%;
+        }
+        input:hover{
+            background-color: rgba(24, 179, 24, 0.849);
+        }
+        input:focus{
+            background-color: rgba(18, 189, 83, 0.774);
+            color:white;
+        }
+        h1{
+            display: block;
+            align-items: center;
+        }
+        .enviar{
+            width: 30vh;
+            background-color: rgb(182, 66, 66);
+            color: white;
+            padding: 2vh;
+            font-size: 1.5em;
+            font-style: bold;
+        }
+        .enviar:hover{
+            background: white;
+            color: rgb(182, 66, 66);
+        }
+        </style>
+        <title>Factura</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+       
+        <form action="/EjercicioCompleto/ingresaFactura" method="POST">
+            <h1>Nueva factura</h1>
+            <label for="fecha">Fecha de la reparación</label><br><input type="date" name="fecha"><br>
+            <label for="encargado">Encargado de la reparación</label><br><input type="text" name="encargado"><br>   
+            <label for="solicitante">Persona solicitante</label><br><input type="text" name="solicitante"><br>
+            <label for="precio">Precio</label><br><input type="number" step="0.1" name="precio"><br>
+            <label for="tipo">Tipo de reparacion</label><br>
+            <select name="tipo">
+                    <option value="formateo">Formateo</option>
+                    <option value="cambioPieza">Cambio de Pieza</option>
+                    <option value="actualizacionSoft">Actualización de Software</option>
+                  </select> <br>
+            <label for="descripcion">Descripción del problema</label><br><input type="text" name="descripcion"><br>
+            <input type="submit" class="enviar" value="Continuar">
+        </form>
+    </div>
+    </body>
+</html>
